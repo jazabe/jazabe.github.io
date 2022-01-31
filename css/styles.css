@@ -1,0 +1,186 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", Calibri, sans-serif;
+}
+
+/* BARRE DE NAVIGATION */
+nav {
+  height: 80px;
+  background: #f5d5d5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav img {
+  width: 190px;
+  position: absolute;
+  top: 6px;
+  left: 2%;
+}
+
+nav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  position: relative;
+  color: #fe0b01;
+  font-size: 18px;
+  padding: 3px 0;
+  text-transform: uppercase;
+}
+
+nav ul li a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #fe0b01;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s linear;
+}
+
+nav ul li a:hover:before {
+  transform: scale(1);
+  transform-origin: left;
+}
+
+/* AJOUT DE LA BARRE DE RECHERCHE ATTENTION CA PEUT TOUT NIQUER*/
+.search {
+  width: 50%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #fe090148;
+  border-right: none;
+  padding: 3px;
+  height: 15px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #fe090148;
+}
+
+.searchTerm:focus {
+  color: #fe090148;
+}
+
+.searchButton {
+  width: 40px;
+  height: 27px;
+  border: 1px solid #fe090148;
+  background: #fe090148;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* FIN AJOUT DU DANGEREUX*/
+
+label #btn,
+label #cancel {
+  color: #fe0b01;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* RESPONSIVE*/
+
+@media (max-width: 1118px) {
+  nav img {
+    left: 1%;
+  }
+}
+
+@media (max-width: 944px) {
+  nav img {
+    left: 1%;
+    top: 20px;
+    width: 130px;
+  }
+
+  nav ul li a {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 860px) {
+  label #btn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #f3bebe;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  #check:checked ~ label #btn {
+    display: none;
+  }
+
+  #check:checked ~ label #cancel {
+    display: block;
+  }
+}
