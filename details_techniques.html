@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="details_techniques.css">
+    <title>Vins et rosé</title>
+</head>
+<body>
+
+   <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo_small.png" class="logo" alt="logo"></a>
+
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class ="menu-icon" for="menu-btn"><span class="nav-icon"></span> </label>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="produit.html">Vin Blanc</a></li>
+                    <li><a href="produit.html">Vin Rouge</a></li>
+                    <li><a href="produit.html">Rosé</a></li>
+                    <li><a href="a_propos.html">A propos</a></li>
+    
+                    <li><a href="details_techniques.html">Détails techniques</a></li>
+                    
+                    
+                    
+                    <li><input type="text" placeholder="Recherche" class="actif"> </li>
+
+                    <li class="search">
+                        <form class="actif" action="produit.html">
+                    
+                        
+                            <button>Rechercher</button>
+            
+                        </form> 
+                    </li>
+
+                    <li><a href="panier.html"><img id="panier" src="images/shopping-cart.png" alt="logo"></a></li>
+
+                    
+                </ul>
+
+            </div>  
+        </nav>
+        <div class="text-box">
+            <h1>Détails techniques</h1>
+            
+        </div>
+    </section>
+
+
+<section class="detail">
+
+ 
+    <h2> Le projet</h2>
+    <p>Nous avons créé ce site dans le cadre de notre DUT Informatique à l’Université de Lyon 1. 
+        Ce projet a été réalisé en équipe par Marie Michel et Romane Berthé. 
+        Nous avons choisi de créer un site internet de vente de vin appelé Vin&Spritueux. 
+        Ce site internet est construit avec les langages de programmation HTML5 et CSS3.
+    </p>
+    <br>
+
+    <h2> Les différentes catégories du site:</h2>
+    <p>Notre site internet est composé d’une barre de navigation, d’un footer et de différentes sections composant le body. 
+        Ces différentes parties sont responsives en fonction de la taille de la fenêtre.
+        <br>
+        Par ailleurs dans la barre de navigation, sont situés nos différentes catégories comme le vin blanc, 
+        le vin rouge et la fiche technique. Il est possible de cliquer sur chacune des catégories et de se déplacer 
+        de rubrique en rubrique.
+        <br>
+        À partir de la page d'accueil, il est possible de suivre le chemin classique d’un client qui consiste 
+        à consulter une page, ajouter un produit au panier, consulter le panier et réaliser le paiement ou bien 
+        vider le panier. 
+        
+    </p>
+    <br>
+
+    <h2> La barre de navigation</h2>
+    <p>Pour rendre la barre de navigation responsive, nous avons créé un menu responsive déroulant. 
+        L’élément “checkbox” a été utilisé pour permettre d’ouvrir et de fermer le menu lorsque la fenêtre 
+        est rétrécie. Une animation a été créée avec l’élément menu-icon et des pseudos éléments before et 
+        after. Cela permet la création d’une croix pour fermer la barre recherche lorsque la fenêtre est 
+        rétrécie.
+        <br>
+
+        Par ailleurs, nous avons utilisé le pseudo classe “hover” avec la couleur grise pour créer une 
+        animation et faire apparaître le contour de chaque catégorie.
+        <br>
+        
+        Le code html et css de la barre de navigation fait partie des autres codes de chaque page pour 
+        rendre le site plus homogène.
+        
+    </p>
+    <br>
+
+    <h2> La page d'accueil </h2>
+    <p>Cette page est composée de différentes sections permettant sa mise en page. Ses sections sont aussi 
+        responsives pour permettre la lecture du contenu sur téléphone ou tablette. 
+        Nous avons utilisé les requêtes média sur la feuille css. Les différentes requêtes présentes dans 
+        média sont mises en application quand la taille de la fenêtre est de moins de 80em.
+        <br>
+
+        Nous avons choisi cette limite, car nous avons remarqué que le contenu des différentes pages n’était 
+        plus responsive à partir de cette limite.
+        <br>
+        
+        Par exemple, nous avons changé l’emplacement du titre de la page avec la propriété top si la fenêtre
+        n’est pas en plein écran. Pour les différentes images et textes, nous avons utilisé la propriété row 
+        et display flex pour que le changement de taille des fenêtres n’impacte pas la mise en page et reste 
+        responsive.
+        <br>
+        
+        
+        De plus, sur cette page, nous avons choisi de rendre certaines images cliquables pour permettre au 
+        client de se déplacer de catégorie en catégorie. Pour cela, nous avons utilisé des liens d’attribut 
+        a href.
+        <br>
+        
+        Nous avons aussi fait le choix de voir apparaître le titre seulement lorsqu’une personne passe sa 
+        souris sur l’image. Nous avons utilisé l’élément transition, hover et transform.
+        <br>
+        
+        Pour afficher les promotions sur la page d’accueil nous avons ajouté un bouton, en savoir plus, 
+        qui redirige directement vers l’emplacement sur la page des promotions. Nous avons placé dans 
+        l’attribut href l'élément ancre.
+        <br>
+        
+        Les différents textes et titres sont tous centrés avec la propriété text-align. Nous avons homogénéisé
+        la police du site en important une propriété de font-family. 
+
+        
+    </p>
+    <br>
+
+    <h2> La page produit</h2>
+    <p>Le code html et css de la barre de navigation et du pied de page sont les mêmes que sur la page 
+        d’accueil. Seul l’élément header est plus petit sur la page produit que sur la page accueil. 
+        Car nous souhaitions pouvoir voir les produits même lorsque nous sommes positionnés en haut de la page.
+        Pour cela, nous avons réduit la taille du header avec l’élément min-height à 60vh. Sur la page d'accueil,
+        la taille de cet élément est de 100vh.
+        <br>
+
+
+        Par ailleurs, nous avons aussi choisi de mettre une transition de 0.5s chaque fois qu’une personne passe sa 
+        souris sur la photo d’un produit. De plus, nous avons défini les images des produits avec un pointeur et 
+        des liens d’attribut a href. Cela permet de cliquer sur les images et de se rendre sur la page descriptive
+        du produit.
+        <br>
+        
+        Pour rendre les images des produits responsives, nous avons défini les lignes sur lesquelles se 
+        trouvent les images avec les éléments display et flex-wrap. Ces éléments permettent de garder la 
+        mise en page de la page produit même ouverte avec une tablette ou un téléphone.
+        <br>
+        
+        La police utilisée pour la page produit est la même que sur la page d’accueil. À partir de cette page, 
+        il est aussi possible de se rendre sur la page d’accueil avec la bar de navigation.
+        
+    </p>
+    <br>
+
+    <h2> La page détail produit</h2>
+    <p>La page détaillant le produit a été découpée en deux colonnes. La première colonne est composée de 
+        l’image du produit. La deuxième colonne est composée de la fiche technique du produit. Pour mettre côte
+        à côte l’image et le descriptif du produit, nous avons utilisé les éléments display et flex wrap.
+        <br>
+
+        Par ailleurs, nous avons ajouté un bouton avec l’attribut href pour permettre d’ajouter l’article au panier.
+        Si le client clique sur ajouter au panier, le bouton permet de l’envoyer directement sur la page panier où 
+        on retrouve le panier composé du produit. De plus, si le client passe sa souris sur le bouton ajouter au 
+        panier, une animation apparaît. Nous avons utilisé la pseudo-classe,hover, avec un background en couleur 
+        et une transition de 1s.
+        <br>
+        
+        Nous avons aussi ajouté à la page du produit l’élément “input type =”number”. Cet élément permet au 
+        client de saisir le nombre de produits qu’il souhaite dans le formulaire.
+        
+    </p>
+    <br>
+
+    <h2> La page panier</h2>
+    <p>Pour la page panier, nous avons divisé en deux parties la page. La première partie est composée de la 
+        table avec le produit, la quantité est du total. La deuxième partie est aussi composée d’un tableau 
+        avec le prix de la commande, le coût de l’envoi de la commande et le prix total de la commande.
+        Les trois colonnes sont alignées dans le tableau grâce à l’attribution des propriétés display et 
+        flex-wrap à la div info-panier contenant le descriptif du produit.
+        <br>
+
+        Nous avons aussi ajouté à la page du panier l’élément “input type =”number”. Cet élément permet au 
+        client d’augmenter le nombre de produits qu’il souhaite tout en restant sur la page du panier.
+        <br>
+        
+        La taille des différents tableaux et leur contenu sont responsive en fonction de la taille de l'onglet. 
+        Par exemple, lorsque la taille de la page est réduite, la largeur du tableau composé du total final passe 
+        de 490px à 210px avec l’élément max-width.
+        <br>
+        
+
+        De plus, nous avons créé un bouton supprimer qui permet de rediriger le client vers la page du panier 
+        vide avec le lien d’attribut “a href”.
+
+        
+    </p>
+    <br>
+
+    <h2> La page panier vide</h2>
+    <p>Pour la page panier vide nous avons utilisé la même structure de code que la page panier. 
+        Cependant, nous avons supprimé la ligne ou se trouver le produit et nous avons ajouté à la place 
+        un bouton permettant au client d’ajouter un produit à son panier. Pour ce bouton, nous avons aussi 
+        utilisé l’attribut “a href” permettant de renvoyer à une autre page.
+    </p>
+    <br>
+
+    <h2> La page a propos</h2>
+    <p>La page à propos est composée de deux div dont l’une est composée d’une image et la deuxième comporte la 
+        partie texte. Nous avons mis les deux div, right et left, sur la même ligne avec l’élément display.
+        Cette page comporte donc la description de notre équipe. Pour mettre en avant certains mots sur la page,
+        nous avons utilisé les propriétés text-décoration, font-weight et color. Par ailleurs, nous avons mis en 
+        page notre texte en utilisant l’élément text-align.
+        <br>
+        
+        Pour que cette page soit responsive nous avons utilisé sur la page css et dans la requête média 
+        “grid-template-columns”.
+        
+    </p>
+    <br>
+
+    <h2> La section pied de page </h2>
+    <p>Le code html et css du pied de page de notre site internet est le même pour permettre un design homogène.
+        Le pied de page est aussi responsive en fonction du choix de la taille de la fenêtre. Nous avons défini
+        ce pied de page avec des colonnes pour permettre une meilleure mise en page. 
+    </p>
+    <br>
+
+
+            
+
+              
+    
+
+                
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Vin&Spiritueux</h4>
+                <ul>
+                    <li><a href= "#">A propos</a></li>
+                    <li><a href= "#">Nos services</a></li>
+                    <li><a href= "#">Conditions Générales de Ventes</a></li>
+                    <li><a href= "#">Liens utiles</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Pour vous aider</h4>
+                <ul>
+                    <li><a href= "#">FAQ</a></li>
+                    <li><a href= "#">Libraison</a></li>
+                    <li><a href= "#">Retours</a></li>
+                    <li><a href= "#">Statut commande</a></li>
+                    <li><a href= "#">Options de paiement</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Boutique en ligne</h4>
+                <ul>
+                    <li><a href= "#">Vin Rouge</a></li>
+                    <li><a href= "#">Vin Blanc</a></li>
+                    <li><a href= "#">Mousseux</a></li>
+                    <li><a href= "#">Rosé</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suivez nous</h4>
+                <ul>
+                    <li><a href= "#">Facebook</a></li>
+                    <li><a href= "#">Instagram</a></li>
+                    <li><a href= "#">Youtube</a></li>
+                    <li><a href= "#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
